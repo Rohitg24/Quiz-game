@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Quiz Project</title>
+</head>
+
+<body>
+    <header>
+        <a id="leaderboard" class="pointer">View Highscores</a>
+        <div>Time: <span id="time"></span></div>
+    </header>
+    <main>
+        <div id="start-card" class='start-card' style="display: block">
+            <div>
+                <h1 class="space">Coding Quiz Challenge</h1>
+                <p class="space">Try to answer the following code-related question within the time limit.</p>
+                <p class="space">Keep in mind that the incorrect answer will penalize your score/time by ten seconds!
+                </p>
+                <button id="startbtn" onclick="startQuiz()" class="space">Start Quiz</button>
+            </div>
+        </div>
+        <div id="question-card" class="start-card question-card" style="display: none">
+            <div>
+                <h1 id="question"></h1>
+                <button id="option1" class="opt" onclick="checkAnswer(0)"></button>
+                <button id="option2" class="opt" onclick="checkAnswer(1)"></button>
+                <button id="option3" class="opt" onclick="checkAnswer(2)"></button>
+                <button id="option4" class="opt" onclick="checkAnswer(3)"></button>
+            </div>
+            <hr />
+            <span id="answer"></span>
+        </div>
+        <div id="all-done" class="start-card" style="display: none">
+            <h1>All Done!</h1>
+            <p>Your final score is <span id="final-score"></span></p>
+            <label for="initial" class="space">Enter initials : </label>
+            <input type="text" id="player" name="initial" class="space">
+            <button id="submit" class="space">Submit</button>
+        </div>
+        <div id="high-score" class="high-score" style="display: none">
+            <h1>Highscores</h1>
+            <ol id="list"></ol>
+            <button id="go-back" class="space">Go Back</button>
+            <button id="clear-score" class="space">Clear Highscores</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
